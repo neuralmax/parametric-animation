@@ -1,0 +1,13 @@
+xn=4;
+yn=4;
+data=rands(0,1,xn*yn);
+echo(len(data));
+for(j=[0:yn-1]){
+    for(i=[0:xn-1]){
+        if(data[i+j*xn]<0.7){
+            translate([i*10,j*10]){
+                circle(4);
+            };
+        };
+    };
+};

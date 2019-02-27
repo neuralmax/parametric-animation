@@ -1,0 +1,16 @@
+xn=4;
+yn=4;
+seed=round(rands(1111,9999,1)[0]);
+seed=8511;
+echo("seed",seed);
+data=rands(0,1,xn*yn,seed);
+echo(len(data));
+for(j=[0:yn-1]){
+    for(i=[0:xn-1]){
+        if(data[i+j*xn]<0.7){
+            translate([i*10,j*10]){
+                circle(4);
+            };
+        };
+    };
+};
